@@ -1,0 +1,17 @@
+body {
+    font-family: Verdanda, sans-serif;
+    background-color: #f0ecec;
+    margin: 0;
+}
+.titulo{
+    text-align: center; 
+    display: block; 
+    height: 50px; 
+    border: solid 1px #c04545;
+    border-radius: 10px;
+    background-color: #c04545;
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+
+}
