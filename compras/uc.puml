@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Cliente
+
+rectangle "Sistema de Agendamento do Consultório" {
+  usecase "Agendar Consulta" as UC1
+  usecase "Cancelar Consulta" as UC2
+  usecase "Visualizar Consultas" as UC3
+  usecase "Atualizar Dados Pessoais" as UC4
+  usecase "Receber Notificações" as UC5
+}
+
+Cliente -- UC1
+Cliente -- UC2
+Cliente -- UC3
+Cliente -- UC4
+Cliente -- UC5
+@enduml

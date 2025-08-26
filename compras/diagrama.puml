@@ -1,0 +1,55 @@
+@startuml
+package "model" {
+  class Cliente {
+    - int id
+    - string nome
+    + __construct(int id, string nome)
+    + getId(): int
+    + getNome(): string
+    + exibirDetalhes(): string
+  }
+
+  class Produto {
+    - int id
+    - string nome
+    - float preco
+    + __construct(int id, string nome, float preco)
+    + getId(): int
+    + getNome(): string
+    + getPreco(): float
+    + exibirDetalhes(): string
+  }
+
+  class Carrinho {
+    - array produtos
+    + adicionarProduto(Produto produto): void
+    + getProdutos(): array
+    + getTotal(): float
+  }
+
+  class Pedido {
+    - Cliente cliente
+    - Carrinho carrinho
+    - string data
+    + __construct(Cliente cliente, Carrinho carrinho)
+    + getCliente(): Cliente
+    + getCarrinho(): Carrinho
+    + getData(): string
+    + exibirDetalhes(): void
+  }
+}
+
+node "Main.php" {
+}
+
+' Relacionamentos internos do modelo
+Cliente "1" -- "1" Pedido
+Carrinho "1" -- "1" Pedido
+Carrinho "1" -- "0..*" Produto
+
+' Relações de dependência do Main
+Main.php .> Cliente
+Main.php .> Produto
+Main.php .> Carrinho
+Main.php .> Pedido
+@enduml
