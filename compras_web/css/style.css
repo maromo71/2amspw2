@@ -1,0 +1,22 @@
+#lista-produtos {
+    display: grid;
+    grid-template-columns: 32% 33% 32%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+}
+.produto{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.imagem-produto {
+    height: 80%;
+    width: 80%;
+}
